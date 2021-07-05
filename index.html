@@ -1,52 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Testine Javascript aplikacija</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  <title>Testine Javascript aplikacija</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
 
-<!--             Kiekis pastaba pradzia   -->
+    <!--           Uzduotis Slapukai   -->
+    <div id="slapukai" class="slapukai-container">
+      <h2>ŠIOJE SVETAINĖJE NAUDOJAMI SLAPUKAI</h2>
+      <p>
+        Naudojame slapukus, kad galėtume suasmeninti turinį bei skelbimus,
+        teikti visuomeninės medijos funkcijas ir analizuoti srautą. Be to,
+        svetainės naudojimo informaciją bendriname su visuomeninės medijos,
+        reklamavimo ir analizės partneriais, kurie gali ją pridėti prie kitos
+        jūsų pateiktos arba naudojant paslaugas surinktos informacijos.
+      </p>
+      <button class="submit" id="sutinku">Sutinku</button>
+      <a href="#" class="dropdown">Daugiau informacijos</a>
+    </div>
 
+    <!--   Uzduotis Papildomas soninis meniu-->
 
-  <h3>Uzduotis prekiu kiekis, pastaba</h3>
-  <div class="uzduotis"> 
-   
-    <input type="number" id="kiekis" value="1" />
-    <button id="kvietejas">Į krepšelį</button>
-    <button id="atsaukejas">Atsaukti</button>
-    <div id="messages"> </div>
-
-  </div>
-
-
-  <!--             Atsitiktinis skaicius ir palyginimas   -->
-
-
-    <div class="uzduotis"> 
-      <h3>Uzduotis - dvieju atsitiktiniu skaiciu generavimas ir paligynimas</h3>
-    <p>"kintamasis A="</p>  
-      <p id="kinA"></p>
-
-      <p>"kintamasis B="</p>  
-      <p id="kinB"></p>
-
-      <div id="messages1"></div>
-
-      <button id="kartoti"> Kartoti </button>
+    <div id="offcanvasAtidarymas" class="offcanvas-popup-container">
+      <div class="actions-toolbar">
+        <div class="toolbar-inner">
+          <ul>
+            <li>
+              <a href="#" id="atidarymoNuoroda" class="link-icon" data-toolbar="Quick options">Open</a>
+            </li>
+            <li>
+              <a href="#" class="wheel-icon" data-toolbar="Support center">Link</a>
+            </li>
+            <li>
+              <a href="#" class="wheel-icon" data-toolbar="Purchase Mi-tech">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel-container">
+        <div class="panel-inner">
+          <h1>
+            Papildomas meniu a
+          </h1>
+        </div>
+      </div>
     </div>
 
 
-  </div>  <!--             Container uzdarymas    -->
+
+    <!--            1 Uzduotis Alert mygtukai   -->
+    <div class="uzduotis">
+      <h5>1 Uzduotis Alert mygtukai</h5>
+      <button id="1alertmygtukas">1 Alert mygtukas</button>
+      <button id="3alertmygtukas">3 Alert mygtukas</button>
+      <button id="sudrezultatas">Alert sudetis</button>
+    </div>
+
+    <!--         2 Atsitiktinis skaicius ir palyginimas   -->
+
+
+    <div class="uzduotis">
+      <h5>2 Uzduotis - dvieju atsitiktiniu skaiciu generavimas ir paligynimas</h5>
+      <p>"Kintamasis A="</p>
+      <p id="kinA"></p>
+
+      <p>"Kintamasis B="</p>
+      <p id="kinB"></p>
+
+      <div id="kintmessages1"></div>
+
+      <button id="kartoti"> Parinkti </button>
+      <button id="kintsuma"> Kintamuju Suma </button>
+
+      <div id="kinmessages2"></div>
+    </div>
+
+
+    <!--            3 Pirkiniu krepselis ir pastabos   -->
+    <div class="uzduotis">
+      <h5> 3 Uzduotis - Pirkiniu krepselis ir pastabos</h5>
+
+      <input type="number" id="kiekis" class="uzsakymolangelis" value="1" />
+      <button id="kvietejas">Į krepšelį</button>
+      <button id="reset">Atsaukti</button>
+      <div id="messages_uzsakymas"> </div>
+
+    </div>
+
+
+    <!--         4    Lenleles ir mygtukas   -->
+    <div class="uzduotis">
+      <h5> 4 Uzduotis - lentele ir mydgtukas</h5>
+      <table class="lentele" id="lentele">
+        <thead>
+          <th>Klientas</th>
+          <th>Miestas</th>
+          <th>Preke</th>
+          <th>Kiekis</th>
+          <th>Data</th>
+        </thead>
+        <tbody id="lentelesVidus"></tbody>           
+      </table>
+    </div>
+
+    <div class="mygtukas">
+      <button id="rodyti">Rodyti</button>
+    </div>
+
+
+    <!--      Masyvo aprasyto JS faiele sudetis   -->
+    <div class="uzduotis">
+      <h5> 5 Uzduotis - Masyvo aprasyto JS faiele sudetis</h5>
+      <button id="mas_sud">Masyvo sudetis</button>
+      <div id="masyvas"></div>
+      <div id="total_mas"></div>
+    </div>
+
+
+
+  </div> <!--             Container uzdarymas    -->
 
 
 
@@ -55,8 +139,8 @@
 
 
 
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/newfile.js"></script>
+  <script type="text/javascript" src="assets/js/custom.js"></script>
+  <script type="text/javascript" src="assets/js/newfile.js"></script>
 
 
 
@@ -64,5 +148,5 @@
 
 
 </body>
-</html>
 
+</html>

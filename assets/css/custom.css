@@ -1,9 +1,152 @@
 .uzduotis {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 
 }
 
-#messages {
-    padding-top: 10px;
+/* Slapuku CSS dalis */
+.slapukai-container {
+    position: fixed;
+    width: 100%;
+    background: #3858f5;
+    padding: 1.5rem 10rem 1.5rem 3rem;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+  }
+  
+  .slapukai-container.closed {
+    display: none;
+  }
+  
+  .slapukai-container h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  
+  .slapukai-container p {
+    font-size: 0.9rem;
+  }
+  
+  .slapukai-container button.submit {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    background: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 17px;
+    padding: 0.5rem 1.5rem;
+    color: #3858f5;
+    font-weight: 600;
+  }
+  
+  .slapukai-container a.dropdown {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .slapukai-container a.dropdown:after {
+    content: "\25BD";
+    margin-left: 5px;
+  }
+  
+  .slapukai-container.open a.dropdown:after {
+    content: "\25B3";
+    margin-left: 5px;
+  }
+  
+/* Papildomo  soninio meniu CSS dalis */
+
+  .offcanvas-popup-container {
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 0.5s;
+    z-index: 3;
+  }
+  
+  .offcanvas-popup-container.open {
+    right: 0;
+  }
+  
+  .actions-toolbar {
+    background: #fff;
+    position: absolute;
+    width: 4rem;
+    top: 5rem;
+    left: -3.5rem;
+  }
+  
+  .actions-toolbar .toolbar-inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .actions-toolbar .toolbar-inner ul > li > a {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  
+  .panel-container {
+    width: 20rem;
+    background: #fff;
+    height: 100vh;
+    box-shadow: -3px 0 50px -2px rgb(0 0 0 / 14%);
+  }
+
+/* Uzsakymo langelio CSS */
+
+.uzsakymolangelis {
+    border-style: solid;
+border-color: rgb(10, 10, 10);
+   
+}
+
+.uzsakymolangelis.error {
+    border-style: solid;
+border-color: red;
+   
+}
+
+
+/* Lenteles ir mygtuko CSS CSS */
+
+.lentele {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  display: none;
+
+}
+
+.lentele.show {
+  display: table;
+}
+
+.lentele th {
+  font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: left;
+    padding: 0.5rem;
+}
+.lentele th:last-child,
+.lentele td:last-child {
+    border-right: none;
+}
+
+/*
+.lentele2 {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    display: none;
+}
+
+.lentele2.show {
+    display: table;
 }
