@@ -328,10 +328,21 @@ document.getElementById('total_mas').innerHTML = total_mas;
 
 //   6 Uzduotis - Select //
 
+
 document.getElementById('car_tikrinti').onclick = function() {
-var select_car = document.getElementById(pasirinkimas_1.value);
-console.log(select_car);
+var select_car = document.getElementById(pasirinkimas_1);
+
+document.getElementById('pasirinktas_car').innerHTML = pasirinkimas_1.value  ;
+
+//console.log(pasirinkimas_1.value);//
 }
+
+function pasirinkimas_2() {
+    var select_car2 = document.getElementById("pasirinkimas_2").value;
+    document.getElementById("pasirinktas_car2").innerHTML = "Jusu pasirinkimas " + select_car2;
+  }
+
+
 /*
  function myFunc(total, num) {
   return total - numbers;
