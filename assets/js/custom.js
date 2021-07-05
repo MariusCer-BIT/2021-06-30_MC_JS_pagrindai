@@ -324,7 +324,14 @@ for(let i = 0; i < masyvas.length; i++) {
 //document.getElementById('masyvas').innerHTML = masyvas; Funkcija kad butu rodomas masyvas nesigauna
 document.getElementById('total_mas').innerHTML = total_mas;
 };
+  
 
+//   6 Uzduotis - Select //
+
+document.getElementById('car_tikrinti').onclick = function() {
+var select_car = document.getElementById(pasirinkimas_1.value);
+console.log(select_car);
+}
 /*
  function myFunc(total, num) {
   return total - numbers;
