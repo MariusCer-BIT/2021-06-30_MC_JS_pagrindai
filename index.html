@@ -111,14 +111,15 @@
           <th>Kiekis</th>
           <th>Data</th>
         </thead>
-        <tbody id="lentelesVidus"></tbody>           
+        <tbody id="lentelesVidus"></tbody>
       </table>
-    </div>
+    
 
     <div class="mygtukas">
       <button id="rodyti">Rodyti</button>
-    </div>
-
+    
+  </div>
+</div>
 
     <!--     5 -  Masyvo aprasyto JS faiele sudetis   -->
     <div class="uzduotis">
@@ -129,56 +130,74 @@
     </div>
 
 
-<!--     6 -  Select    -->
+    <!--     6 -  Select    -->
 
-<div class="uzduotis">
-  <h5> 6 Uzduotis - Select </h5>
-<div calss="su_mygtuku"></div>
-  <label for="cars">Pasirinkite automobili:</label>
+    <div class="uzduotis">
+      <h5> 6 Uzduotis - Select </h5>
+      <div calss="su_mygtuku">
+        <p> 6.1 Uzduotis - Select su mygtuku </p>
+        <br>
+        <label for="cars">Pasirinkite automobili:</label>
 
-  <select id="pasirinkimas_1">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </select>
+        <select id="pasirinkimas_1">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+          <option value="dviratis">Dviratis</option>
+        </select>
 
-  <button id="car_tikrinti">Tikrinti</button>
-  <div id="pasirinktas_car"></div>
-</div>
+        <button id="car_tikrinti">Tikrinti</button>
+        <div id="pasirinktas_car"></div>
+        <div id="pap_tekstas_1"></div>
+
+      </div>
+   
+
+<br><br>
+    <div class="be_mygtuko">
+      <p>6.2 Uzduotis - Select be mygtuko</p>
+      <br>
+      <select id="pasirinkimas_2">
+        <option value="niekas">Pasirinkti:</option>
+        <option value="mazda">Mazda</option>
+        <option value="zaz">Zaz</option>
+        <option value="lada">Lada</option>
+        <option value="volga">Volga</option>
+      </select>
+
+      <div id="pasirinktas_car2"></div>
+      <div id="pap_tekstas_2"></div>
 
 
- <div class="be_mygtuko">
-  <select id="pasirinkimas_2" onchange="pasirinkimas_2()">
-    <option value="mazda">Mazda</option>
-    <option value="zaz">Zaz</option>
-    <option value="lada">Lada</option>
-    <option value="volga">Volga</option>
-  </select>  
-
-  <div id="pasirinktas_car2"></div>
+    </div>
+  </div>
 
 
- </div>
+    <!--     7 -  jQuery mygtukas    -->
+    <div class="uzduotis">
+      <h5>7 - jQuery mygtukas </h5>
+      <br>
+      <p>Prideda papildoma klase /remelius/ ant kiekvienos uzduotis </p>
+      <button id="iq_prideti" class="iq_prideti">Prideti klase</button>
+      <button id="iq_atimti" class="iq_atimti">Atimti klase</button>
 
-</div>
+    </div>
 
 
+ 
   </div> <!--             Container uzdarymas    -->
 
 
 
 
 
-
-
+  <!--      Jquery  scriptas  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--      Jquery  scriptas  -->
 
   <script type="text/javascript" src="assets/js/custom.js"></script>
   <script type="text/javascript" src="assets/js/newfile.js"></script>
-
-
-
-
 
 
 </body>

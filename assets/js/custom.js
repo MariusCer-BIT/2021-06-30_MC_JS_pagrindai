@@ -328,19 +328,96 @@ document.getElementById('total_mas').innerHTML = total_mas;
 
 //   6 Uzduotis - Select //
 
-
+//   6.1 Uzduotis - Select su mygtuku //
 document.getElementById('car_tikrinti').onclick = function() {
-var select_car = document.getElementById(pasirinkimas_1);
+var scar = document.getElementById('pasirinkimas_1');
 
-document.getElementById('pasirinktas_car').innerHTML = pasirinkimas_1.value  ;
+   var paptekstas1 = '';
 
-//console.log(pasirinkimas_1.value);//
+    switch(scar.value) {
+
+        case 'volvo':
+            paptekstas1 = 'Volvo - daug masės, daug plieno.';
+            break;
+
+        case 'saab':
+            paptekstas1 = 'Saab - Švedų mašina';
+            break;
+
+        case 'mercedes':
+            paptekstas1 = 'Mersas ir Arfikoje';
+            break;
+     
+
+        case 'audi':
+            paptekstas1 = 'Audi - nečiaudi';
+            break;
+
+        default:
+            paptekstas1 = 'Dviratis yra ir velniop tą mašiną';
+             
+        };
+
+        document.getElementById('pasirinktas_car').innerHTML = 'Pasirinktas automobilis   ' + scar.value ;
+        document.getElementById('pap_tekstas_1').innerHTML = paptekstas1 ;
+
+}
+//   6.2 Uzduotis - Automatiskai pakeitus reiksme //
+
+document.getElementById('pasirinkimas_2').onchange = function() {
+    var select_car2 = document.getElementById("pasirinkimas_2");
+
+    var paptekstas2 = '';
+
+    switch(select_car2.value) {
+
+        case 'mazda':
+            paptekstas2 = 'Kas daug sneka vazineja su Mazda';
+            break;
+
+        case 'zaz':
+            paptekstas2 = 'ZAZ - rusiskas porsas';
+            break;
+
+        case 'lada':
+            paptekstas2 = 'LADA - tas pats FIAT';
+            break;
+     
+            case 'volga':
+                paptekstas2 = 'Volga - rusiska prabanga';
+                break;
+
+        default:
+            paptekstas2 = 'Jus nieko nepasirinkote';
+             
+        };
+
+        document.getElementById('pap_tekstas_2').innerHTML = paptekstas2 ;
+
+    document.getElementById("pasirinktas_car2").innerHTML = "Jusu pasirinkimas " + select_car2.value;
 }
 
-function pasirinkimas_2() {
-    var select_car2 = document.getElementById("pasirinkimas_2").value;
-    document.getElementById("pasirinktas_car2").innerHTML = "Jusu pasirinkimas " + select_car2;
-  }
+//  !! jQuery iskvietimas !! //
+
+jQuery(document).ready(function(){
+
+//   7 Uzduotis - Naujas mygtukas //
+// jQuery('.naujasmygtukas').addClass('klase'); // . reiskia clase
+
+// jQuery('#naujasmygtukas').removeClass('klase'); //# reiskia id
+
+$('#iq_prideti').click(function(){
+    alert('Klases pridejimas');
+    $(".uzduotis").addClass("papildoma_klase");
+});
+
+$('#iq_atimti').click(function(){
+    alert('Klases atemims');
+    $(".uzduotis").removeClass("papildoma_klase");
+      
+});
+
+});
 
 
 /*
