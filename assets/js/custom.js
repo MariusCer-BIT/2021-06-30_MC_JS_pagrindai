@@ -396,7 +396,7 @@ document.getElementById('pasirinkimas_2').onchange = function() {
 
     document.getElementById("pasirinktas_car2").innerHTML = "Jusu pasirinkimas " + select_car2.value;
 }
-/*
+/
 //  !! jQuery iskvietimas !! //
 
 jQuery(document).ready(function(){
@@ -416,8 +416,12 @@ $('#iq_atimti').click(function(){
     $(".uzduotis").removeClass("papildoma_klase");
       
 });
+});
+
 
 //   8 Uzduotis - Naujas mygtukas //
+
+jQuery(document).ready(function(){
 
 $('#jpasirinkimas_2').change(function() {
     alert('funkcija pasileido');
@@ -448,25 +452,67 @@ $('#jpasirinkimas_2').change(function() {
             jpaptekstas2 = 'J-Jus nieko nepasirinkote';
              
         };
-        alert(jpaptekstas2);
-        $('#jpap_tekstas_2').text = jpaptekstas2 ;
+     
 
-    $('#pasirinktas_car2').innerHTML = "Jusu pasirinkimas " + jselect_car2.value;
+        $('#jpaptekstas_2').html(jpaptekstas2) ;
 
+    $('#jpasirinktas_car2').html("Jusu pasirinkimas "+jselect_car2.val());
 
-
-});
-
-});
+/* $('#jpaptekstas_2').html(jpaptekstas2) 
+                            - rodo tik viena reiksme ;
+$('#jpaptekstas_2').append(jpaptekstas2) 
+                           - rodo visas parinktas reikšmes, rikiuojant naujausia gale;
+$('#jpaptekstas_2').prepend(jpaptekstas2)  
+                          - rodo visas parinktas reikšmes, rikiuojant naujausia priekyje;
 */
 
-jQuery(document).ready(function() {​​​​​
-    jQuery(duomenys).each(function(indeksas, reiksme){​​​​​
-          jQuery(reiksme).each(function(indeksas, reiksme) {​​​​​
-                console.log(reiksme['miestas']); 
-           }​​​​​);     
-     }​​​​​);
-   }​​​​​);
+});
+
+});
+
+
+
+const duomenys2 = [
+    {
+        klientas: "J-Jonas",
+        miestas: "J-Kaunas",
+        preke: "J-Plaktukas",
+        kiekis: "J-2",
+        data: "J-2020-07-01",
+        
+    },
+    {
+        klientas: "J-Petras",
+        miestas: "J-Vilnius",
+        preke: "J-atsuktuvas",
+        kiekis: "J-4",
+        data: "J-2020-08-20",
+    },
+    {
+        klientas: "J-Antanas",
+        miestas: "J-Utena",
+        preke: "J-viela",
+        kiekis: "J-8",
+        data: "J-2021-02-02",
+    },
+    {
+    klientas: "J-Gintas",
+    miestas: "J-Kaunas",
+    preke: "J-Plaktukas",
+    kiekis: "J-3",
+    data: "J-2020-07-01"
+}
+];
+
+jQuery(document).ready(function() {
+jQuery(duomenys2).each(function(indeksas, reiksme){
+    jQuery(reiksme).each(function(indeksas, reiksme){
+        console.log(reiksme['data']);
+    });
+});
+});
+
+
 
 
 
