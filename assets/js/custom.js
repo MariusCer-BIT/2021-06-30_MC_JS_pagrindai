@@ -396,7 +396,7 @@ document.getElementById('pasirinkimas_2').onchange = function() {
 
     document.getElementById("pasirinktas_car2").innerHTML = "Jusu pasirinkimas " + select_car2.value;
 }
-
+/*
 //  !! jQuery iskvietimas !! //
 
 jQuery(document).ready(function(){
@@ -417,7 +417,58 @@ $('#iq_atimti').click(function(){
       
 });
 
+//   8 Uzduotis - Naujas mygtukas //
+
+$('#jpasirinkimas_2').change(function() {
+    alert('funkcija pasileido');
+    
+   var jselect_car2 = jQuery(this);
+
+    var jpaptekstas2 = '';
+
+    switch(jselect_car2.val()) {
+
+        case 'mazda':
+            jpaptekstas2 = 'J-Kas daug sneka vazineja su Mazda';
+            break;
+
+        case 'zaz':
+            jpaptekstas2 = 'J-ZAZ - rusiskas porsas';
+            break;
+
+        case 'lada':
+            jpaptekstas2 = 'J-LADA - tas pats FIAT';
+            break;
+     
+            case 'volga':
+                jpaptekstas2 = 'J-Volga - rusiska prabanga';
+                break;
+
+        default:
+            jpaptekstas2 = 'J-Jus nieko nepasirinkote';
+             
+        };
+        alert(jpaptekstas2);
+        $('#jpap_tekstas_2').text = jpaptekstas2 ;
+
+    $('#pasirinktas_car2').innerHTML = "Jusu pasirinkimas " + jselect_car2.value;
+
+
+
 });
+
+});
+*/
+
+jQuery(document).ready(function() {​​​​​
+    jQuery(duomenys).each(function(indeksas, reiksme){​​​​​
+          jQuery(reiksme).each(function(indeksas, reiksme) {​​​​​
+                console.log(reiksme['miestas']); 
+           }​​​​​);     
+     }​​​​​);
+   }​​​​​);
+
+
 
 
 /*
